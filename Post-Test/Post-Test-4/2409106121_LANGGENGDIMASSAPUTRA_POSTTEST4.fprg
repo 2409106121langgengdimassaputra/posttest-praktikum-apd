@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="aodadoadadadadad"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-30 12:17:45 AM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtN0pLMVY1OUc7MjAyNC0wOS0yOTsxMDozMToyMyBQTTsyNjI3"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtN0pLMVY1OUc7MjAyNC0wOS0zMDsxMjoxNzo0NSBBTTsyOzI3MjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ussername" type="String" array="False" size=""/>
+            <declare name="password, salah, pengulangan" type="Integer" array="False" size=""/>
+            <assign variable="salah" expression="0"/>
+            <while expression="salah &lt; 3">
+                <output expression="&quot;masukkan ussername anda : &quot;" newline="True"/>
+                <input variable="ussername"/>
+                <output expression="&quot;masukkan password anda : &quot;" newline="True"/>
+                <input variable="password"/>
+                <assign variable="salah" expression="salah + 1"/>
+                <if expression="ussername == &quot;dimas&quot; and password == 121">
+                    <then>
+                        <output expression="&quot;login berhasil&quot;" newline="True"/>
+                        <declare name="mobil, ulang" type="String" array="False" size=""/>
+                        <declare name="diskon, harga, hitung, bayar" type="Integer" array="False" size=""/>
+                        <output expression="&quot;masukkan merek mobil yang ingin dibeli: &quot;" newline="True"/>
+                        <input variable="mobil"/>
+                        <output expression="&quot;masukkan harga mobil&quot;" newline="True"/>
+                        <input variable="harga"/>
+                        <if expression="mobil == &quot;tesla&quot;">
+                            <then>
+                                <assign variable="diskon" expression="harga * 0.17"/>
+                                <assign variable="bayar" expression="harga - diskon"/>
+                                <output expression="&quot;mobil tesla seharga &quot;&amp;(harga)&amp;&quot; diskon 17% menjadi &quot;&amp;(bayar)" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="mobil == &quot;toyota&quot;">
+                                    <then>
+                                        <assign variable="diskon" expression="harga * 0.21"/>
+                                        <assign variable="bayar" expression="harga - diskon"/>
+                                        <output expression="&quot;mobil toyota seharga &quot;&amp;(harga)&amp;&quot; diskon 21% menjadi &quot;&amp;(bayar)" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="mobil == &quot;hyundai&quot;">
+                                            <then>
+                                                <assign variable="diskon" expression="harga * 0.23"/>
+                                                <assign variable="bayar" expression="harga - diskon"/>
+                                                <output expression="&quot;mobil hyundai seharga &quot;&amp;(harga)&amp;&quot; diskon 23% menjadi &quot;&amp;(bayar)" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <output expression="&quot;tidak jadi beli&quot;" newline="True"/>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                        <assign variable="hitung" expression="1"/>
+                        <while expression="True">
+                            <output expression="&quot;mobil apa lagi yang ingin di beli ? &quot;" newline="True"/>
+                            <input variable="ulang"/>
+                            <if expression="ulang == &quot;tesla&quot;">
+                                <then>
+                                    <assign variable="diskon" expression="harga * 0.17"/>
+                                    <assign variable="bayar" expression="harga - diskon"/>
+                                    <output expression="&quot;mobil tesla seharga &quot;&amp;(harga)&amp;&quot; diskon 17% menjadi &quot;&amp;(bayar)" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="ulang == &quot;toyota&quot;">
+                                        <then>
+                                            <assign variable="diskon" expression="harga * 0.21"/>
+                                            <assign variable="bayar" expression="harga - diskon"/>
+                                            <output expression="&quot;mobil toyota seharga &quot;&amp;(harga)&amp;&quot; diskon 21% menjadi &quot;&amp;(bayar)" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="ulang == &quot;hyundai&quot;">
+                                                <then>
+                                                    <assign variable="diskon" expression="harga * 0.23"/>
+                                                    <assign variable="bayar" expression="harga - diskon"/>
+                                                    <output expression="&quot;mobil hyundai seharga &quot;&amp;(harga)&amp;&quot; diskon 23% menjadi &quot;&amp;(bayar)" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;tidak jadi membeli&quot;" newline="True"/>
+                                                    <breakpoint expression="" always="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                            <assign variable="hitung" expression="hitung + 1"/>
+                        </while>
+                    </then>
+                    <else>
+                        <output expression="&quot;login gagal&quot;" newline="True"/>
+                        <assign variable="pengulangan" expression="3 - salah"/>
+                        <output expression="&quot;percobaan sisa &quot;&amp;pengulangan&amp;&quot; kali&quot;" newline="True"/>
+                        <breakpoint expression="" always="True"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
